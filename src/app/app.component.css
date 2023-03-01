@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #1a232e;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.active {
+    background-color: black;
+}

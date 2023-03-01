@@ -1,0 +1,36 @@
+<table>
+    <thead>
+        <th>Name</th>
+        <th>City Name</th>
+        <th>City Position</th>
+        <th>City Status</th>
+        <th>Country Positon</th>
+        <th>Country Status</th>
+        <th>
+            <button routerLink="/add-candidate">Add Candidate </button>
+        </th>
+    </thead>
+    <tbody *ngFor="let candidate of candidatesList ">
+        <td>{{candidate.name}}</td>
+        <td>{{candidate.cityname}}</td>
+        <ng-container *ngFor="let position of postionList">
+            <ng-container *ngIf="position.id == candidate.positionId">
+                <ng-container *ngFor="let city of cityList">
+                    <ng-container *ngIf="position.cityId == city.id">
+                        <td>{{city.name}}</td>
+                        <td>{{city.status}}</td>
+                    </ng-container>
+                </ng-container>
+                <ng-container *ngFor="let country of countryList">
+                    <ng-container *ngIf="position.countryId == country.id">
+                        <td>{{country.name}}</td>
+                        <td>{{country.status}}</td>
+                    </ng-container>
+                </ng-container>
+
+            </ng-container>
+        </ng-container>
+        <td><button (click)="DeleteClicked(candidate.id)">Delete</button></td>
+
+    </tbody>
+</table>

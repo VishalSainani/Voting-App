@@ -1,0 +1,35 @@
+<form class="addCandidate" (ngSubmit)="AddCandidate()" [formGroup]="candidateForm">
+
+    <input class="name" placeholder="Name" formControlName="name" />
+
+    <select formControlName="cname">
+        <option value="">-- Select City Name --</option>
+        <option value="CityA">CityA</option>
+        <option value="CityB">CityB</option>
+        <option value="CityC">CityC</option>
+
+
+    </select>
+
+    <select formControlName="cityPosition">
+        <option value="">-- Select City Position --</option>
+        <option *ngFor="let city of cityList" [value]="city.id">{{city.name}}</option>
+    </select>
+
+    <select formControlName="cityStatus">
+        <option value="">-- Select City Status --</option>
+        <option [value]="'Open'">Open</option>
+        <option [value]="'Close'">Close</option>
+    </select>
+
+    <select formControlName="countryPosition">
+        <option value="">-- Select Country Position --</option>
+        <option *ngFor="let country of countryList" [value]="country.id">{{country.name}}</option>
+    </select>
+    <select formControlName="countryStatus">
+        <option value="">-- Select Country Status --</option>
+        <option [value]="'Open'">Open</option>
+        <option [value]="'Close'">Close</option>
+    </select>
+    <button type="submit">Add</button>
+</form>

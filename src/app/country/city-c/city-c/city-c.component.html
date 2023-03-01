@@ -1,0 +1,31 @@
+<ng-container *ngIf="closeVotes">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th> City A Positon</th>
+            <th>City Status</th>
+            <!-- <th>Total Votes</th> -->
+            <th><Button (click)="CloseVote()">Close</Button></th>
+        </thead>
+        <tbody *ngFor="let candidate of candidateList ">
+            <ng-container *ngIf="candidate.cityname=='CityC'">
+                <ng-container *ngFor="let position of positionList">
+                    <ng-container *ngIf="candidate.positionId==position.id">
+                        <ng-container *ngFor="let city of cityList">
+                            <ng-container *ngIf="city.id==position.cityId && city.id !=-1">
+                                <td>{{candidate.name}}</td>
+                                <td>{{city.name}}</td>
+                                <td>{{city.status}}</td>
+                                <td><button (click)="CountVote(candidate.id)">Vote</button></td>
+
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </tbody>
+    </table>
+</ng-container>
+<ng-container *ngIf="!closeVotes">
+    <h1>Voting Ended</h1>
+</ng-container>

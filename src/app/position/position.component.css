@@ -1,0 +1,116 @@
+.Country,
+.City {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.Country h3,
+.City h3 {
+    margin: 0;
+}
+
+.Country hr,
+.City hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 16px 0;
+}
+
+.Country table,
+.City table {
+    width: 100%;
+    border-collapse: collapse;
+    /* display: flex; */
+    flex-wrap: nowrap;
+}
+
+.Country th,
+.City th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+.Country td,
+.City td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.button {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgba(116, 116, 166, 0.734);
+
+}
+
+.addPosition {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* margin: 20px; */
+    /* padding-bottom: 800px; */
+    /* margin-bottom: 10px; */
+}
+
+.addPosition input,
+.addPosition select {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.addPosition input:focus,
+.addPosition select:focus {
+    outline: none;
+    border-color: #0077cc;
+    margin-right: 10px;
+
+}
+
+.addPosition select {
+    width: 100%;
+    margin-right: 10px;
+
+}
+
+.addPosition button[type="submit"] {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addPosition button[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}

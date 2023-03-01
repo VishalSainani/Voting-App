@@ -1,0 +1,35 @@
+<ng-container *ngIf="closeVotes">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Country Positon</th>
+            <th>Country Status</th>
+            <!-- <th>Total Votes</th> -->
+            <th><Button (click)="CloseVote()">Close</Button></th>
+        </thead>
+        <tbody *ngFor="let candidate of candidateList ">
+            <ng-container *ngFor="let position of positionList">
+                <ng-container *ngIf="candidate.positionId==position.id">
+                    <ng-container *ngFor="let country of countryList">
+                        <ng-container *ngIf="country.id==position.countryId && country.id != -1">
+                            <td>{{candidate.name}}</td>
+                            <td>{{country.name}}</td>
+                            <td>{{country.status}}</td>
+                            <td><button (click)="CountVote(candidate.id)">Vote</button></td>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+                <!-- <ng-container *ngFor="let votes of candidateVotes">
+                    <ng-container *ngIf="votes.id==candidate.id">
+                        <td>{{votes.vote}}</td>
+                    </ng-container>
+                </ng-container> -->
+
+            </ng-container>
+
+        </tbody>
+    </table>
+</ng-container>
+<ng-container *ngIf="!closeVotes">
+    <h1>Voting Ended</h1>
+</ng-container>

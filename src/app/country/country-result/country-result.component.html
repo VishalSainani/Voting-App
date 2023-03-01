@@ -1,0 +1,75 @@
+<div class="country">
+    <h3>Country</h3>
+</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Vote</th>
+    </thead>
+    <tbody *ngFor="let item of candidateVotes">
+        <ng-container *ngFor="let candidate of candidateList">
+            <ng-container *ngIf="item.id==candidate.id">
+                <td>{{candidate.name}}</td>
+            </ng-container>
+        </ng-container>
+        <td>{{item.vote}}</td>
+
+    </tbody>
+</table>
+<hr>
+<div class="cityA">
+    <h3>CityA</h3>
+</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Vote</th>
+    </thead>
+    <tbody *ngFor="let item of candidateVotesA">
+        <ng-container *ngFor="let candidate of candidateList">
+            <ng-container *ngIf="item.id==candidate.id">
+                <td>{{candidate.name}}</td>
+            </ng-container>
+        </ng-container>
+        <td>{{item.vote}}</td>
+
+    </tbody>
+</table>
+<hr>
+<div class="cityB">
+    <h3>CityB</h3>
+</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Vote</th>
+    </thead>
+    <tbody *ngFor="let item of candidateVotesB">
+        <ng-container *ngFor="let candidate of candidateList">
+            <ng-container *ngIf="item.id==candidate.id">
+                <td>{{candidate.name}}</td>
+            </ng-container>
+        </ng-container>
+        <td>{{item.vote}}</td>
+
+    </tbody>
+</table>
+<hr>
+<div class="cityC">
+    <h3>CityC</h3>
+</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Vote</th>
+    </thead>
+    <tbody *ngFor="let item of candidateVotesC">
+        <ng-container *ngFor="let candidate of candidateList">
+            <ng-container *ngIf="item.id==candidate.id">
+                <td>{{candidate.name}}</td>
+            </ng-container>
+        </ng-container>
+        <td>{{item.vote}}</td>
+
+    </tbody>
+</table>

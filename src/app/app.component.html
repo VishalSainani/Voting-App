@@ -1,0 +1,27 @@
+<header>
+    <h1>Voting App</h1>
+    <div>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Candidates</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/add-position">Position</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country">Country</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/result">Country-Result</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/cityA">CityA</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/cityAResult">CityA Result</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/cityB">CityB</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/cityBResult">CityB Result</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/cityC">CityC</button>
+        <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/country/cityCResult">CityC Result</button>
+
+    </div>
+</header>
+
+<router-outlet></router-outlet>

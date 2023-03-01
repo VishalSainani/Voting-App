@@ -1,0 +1,40 @@
+.addCandidate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.addCandidate input,
+.addCandidate select {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.addCandidate input:focus,
+.addCandidate select:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+.addCandidate select {
+    width: 100%;
+}
+
+.addCandidate button[type="submit"] {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addCandidate button[type="submit"]:hover {
+    background-color: #005fa3;
+}

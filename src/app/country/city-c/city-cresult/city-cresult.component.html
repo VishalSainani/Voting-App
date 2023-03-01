@@ -1,0 +1,15 @@
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Vote</th>
+    </thead>
+    <tbody *ngFor="let item of candidateVotes">
+        <ng-container *ngFor="let candidate of candidateList">
+            <ng-container *ngIf="item.id==candidate.id">
+                <td>{{candidate.name}}</td>
+            </ng-container>
+        </ng-container>
+        <td>{{item.vote}}</td>
+
+    </tbody>
+</table>

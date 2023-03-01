@@ -1,0 +1,59 @@
+<div class="Country">
+    <h3>Country</h3>
+    <hr>
+    <br>
+    <table>
+        <thead>
+            <th>Country Positon</th>
+            <th>Country Status</th>
+            <th><Button>Add Country</Button></th>
+
+        </thead>
+        <tbody *ngFor="let country of countryList ">
+            <td>{{country.name}}</td>
+            <td>{{country.status}}</td>
+            <td><button (click)="DeleteCountry(country.id)">Delete</button></td>
+
+
+        </tbody>
+    </table>
+</div>
+
+<div class="City">
+    <h3>City</h3>
+    <hr>
+    <br>
+    <table>
+        <thead>
+            <th>City Position</th>
+            <th>City Status</th>
+            <th><Button>Add City</Button></th>
+
+        </thead>
+        <tbody *ngFor="let city of cityList ">
+            <td>{{city.name}}</td>
+            <td>{{city.status}}</td>
+            <td><button (click)="DeleteCity(city.id)">Delete</button></td>
+        </tbody>
+    </table>
+</div>
+
+<div class="addPoisiton">
+    <form class="addPoisiton" (ngSubmit)="AddCity()" [formGroup]="poistionForm">
+
+        <input class="cityPosition" placeholder="City Position" formControlName="cityPosition" />
+        <input class="cityStatus" placeholder="City Status" formControlName="cityStatus" />
+        <button type="submit">Add</button>
+
+    </form>
+</div>
+<div class="addPoisiton">
+
+    <form class="addPoisiton" (ngSubmit)="AddCountry()" [formGroup]="poistionForm">
+
+        <input class="countryPosition" placeholder="country Position" formControlName="countryPosition" />
+        <input class="countryStatus" placeholder="country Status" formControlName="countryStatus" />
+        <button type="submit">Add</button>
+
+    </form>
+</div>
